@@ -60,6 +60,6 @@ class ColorTones {
     tone80: 0XFFCCCCCC,
     tone90: 0XFFE0E0E0,
     tone95: 0XFFF0F0F0,
-    tone100: 0XFF000000,
+    tone100: 0XFFFFFFFF,
   );
 }

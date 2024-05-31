@@ -1,17 +1,19 @@
+import 'package:emanoelviana/src/core/theme/colors/color_tones.dart';
 import 'package:flutter/material.dart';
 
-class EmVianaTextTheme {
-  EmVianaTextTheme._();
+class AppTextTheme {
+  AppTextTheme._();
 
-  static const TextTheme dark = TextTheme(
+  static TextTheme dark = TextTheme(
     /// Display
 
     displayLarge: TextStyle(
       fontFamily: 'Roobert',
-      fontSize: 52,
-      height: 56 / 52,
-      fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      fontSize: 72,
+      height: 88 / 72,
+      fontWeight: FontWeight.w300,
+      letterSpacing: -.4,
+      color: Color(ColorTones.neutral.tone100),  
     ),
 
     displayMedium: TextStyle(
@@ -19,7 +21,7 @@ class EmVianaTextTheme {
       fontSize: 44,
       height: 52 / 44,
       fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     displaySmall: TextStyle(
@@ -27,7 +29,7 @@ class EmVianaTextTheme {
       fontSize: 36,
       height: 44 / 36,
       fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     /// Headline
@@ -37,7 +39,7 @@ class EmVianaTextTheme {
       fontSize: 32,
       height: 40 / 32,
       fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     headlineMedium: TextStyle(
@@ -45,7 +47,7 @@ class EmVianaTextTheme {
       fontSize: 28,
       height: 36 / 28,
       fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     headlineSmall: TextStyle(
@@ -53,7 +55,7 @@ class EmVianaTextTheme {
       fontSize: 24,
       height: 32 / 24,
       fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     /// Title
@@ -61,77 +63,83 @@ class EmVianaTextTheme {
     titleLarge: TextStyle(
       fontFamily: 'Roobert',
       fontSize: 20,
-      height: 28 / 20,
-      fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      height: 32 / 20,
+      fontWeight: FontWeight.w500,
+      letterSpacing: -.4,  
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     titleMedium: TextStyle(
       fontFamily: 'Roobert',
       fontSize: 16,
       height: 24 / 16,
-      fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      fontWeight: FontWeight.w500,
+      letterSpacing: -.4,
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     titleSmall: TextStyle(
       fontFamily: 'Roobert',
       fontSize: 14,
       height: 20 / 14,
-      fontWeight: FontWeight.w800,
-      // color: Color(0XFFFFFFFF),
+      fontWeight: FontWeight.w500,
+      letterSpacing: -.4,
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     /// Body
 
     bodyLarge: TextStyle(
-      fontFamily: 'Satoshi',
-      fontSize: 16,
-      height: 24 / 16,
+      fontFamily: 'Roobert',
+      fontSize: 18,
+      height: 32 / 18,
       fontWeight: FontWeight.w400,
-      // color: Color(0XFFFFFFFF),
+      
+      color: Color(ColorTones.neutral.tone80),
     ),
 
     bodyMedium: TextStyle(
-      fontFamily: 'Satoshi',
-      fontSize: 14,
-      height: 20 / 14,
+      fontFamily: 'Roobert',
+      fontSize: 16,
+      height: 24 / 16,
       fontWeight: FontWeight.w400,
-      // color: Color(0XFFFFFFFF),
+      
+      color: Color(ColorTones.neutral.tone80),
     ),
 
     bodySmall: TextStyle(
-      fontFamily: 'Satoshi',
-      fontSize: 12,
-      height: 16 / 12,
+      fontFamily: 'Roobert',
+      fontSize: 14,
+      height: 20 / 14,
       fontWeight: FontWeight.w400,
-      // color: Color(0XFFFFFFFF),
+      
+      color: Color(ColorTones.neutral.tone80),
     ),
 
     /// Label
 
     labelLarge: TextStyle(
-      fontFamily: 'Satoshi',
+      fontFamily: 'Roobert',
       fontSize: 16,
       height: 24 / 16,
       fontWeight: FontWeight.w700,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     labelMedium: TextStyle(
-      fontFamily: 'Satoshi',
+      fontFamily: 'Roobert',
       fontSize: 14,
       height: 20 / 14,
       fontWeight: FontWeight.w700,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     labelSmall: TextStyle(
-      fontFamily: 'Satoshi',
+      fontFamily: 'Roobert',
       fontSize: 12,
       height: 16 / 12,
       fontWeight: FontWeight.w700,
-      // color: Color(0XFFFFFFFF),
+      color: Color(ColorTones.neutral.tone100),
     ),
   );
 }
