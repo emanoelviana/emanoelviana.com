@@ -1,5 +1,6 @@
-import 'package:emanoelviana/src/core/theme/colors/color_tones.dart';
 import 'package:flutter/material.dart';
+
+import 'package:emanoelviana/src/core/theme/colors/color_tones.dart';
 
 class AppTextTheme {
   AppTextTheme._();
@@ -13,7 +14,7 @@ class AppTextTheme {
       height: 88 / 72,
       fontWeight: FontWeight.w300,
       letterSpacing: -.4,
-      color: Color(ColorTones.neutral.tone100),  
+      color: Color(ColorTones.neutral.tone100),
     ),
 
     displayMedium: TextStyle(
@@ -64,8 +65,8 @@ class AppTextTheme {
       fontFamily: 'Roobert',
       fontSize: 20,
       height: 32 / 20,
+      letterSpacing: .2,
       fontWeight: FontWeight.w500,
-      letterSpacing: -.4,  
       color: Color(ColorTones.neutral.tone100),
     ),
 
@@ -73,8 +74,8 @@ class AppTextTheme {
       fontFamily: 'Roobert',
       fontSize: 16,
       height: 24 / 16,
+      letterSpacing: .4,
       fontWeight: FontWeight.w500,
-      letterSpacing: -.4,
       color: Color(ColorTones.neutral.tone100),
     ),
 
@@ -83,7 +84,6 @@ class AppTextTheme {
       fontSize: 14,
       height: 20 / 14,
       fontWeight: FontWeight.w500,
-      letterSpacing: -.4,
       color: Color(ColorTones.neutral.tone100),
     ),
 
@@ -94,7 +94,6 @@ class AppTextTheme {
       fontSize: 18,
       height: 32 / 18,
       fontWeight: FontWeight.w400,
-      
       color: Color(ColorTones.neutral.tone80),
     ),
 
@@ -103,7 +102,6 @@ class AppTextTheme {
       fontSize: 16,
       height: 24 / 16,
       fontWeight: FontWeight.w400,
-      
       color: Color(ColorTones.neutral.tone80),
     ),
 
@@ -112,7 +110,6 @@ class AppTextTheme {
       fontSize: 14,
       height: 20 / 14,
       fontWeight: FontWeight.w400,
-      
       color: Color(ColorTones.neutral.tone80),
     ),
 
@@ -122,7 +119,8 @@ class AppTextTheme {
       fontFamily: 'Roobert',
       fontSize: 16,
       height: 24 / 16,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w500,
+      letterSpacing: .4,
       color: Color(ColorTones.neutral.tone100),
     ),
 
@@ -130,7 +128,8 @@ class AppTextTheme {
       fontFamily: 'Roobert',
       fontSize: 14,
       height: 20 / 14,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w500,
+      letterSpacing: .4,
       color: Color(ColorTones.neutral.tone100),
     ),
 
@@ -138,7 +137,8 @@ class AppTextTheme {
       fontFamily: 'Roobert',
       fontSize: 12,
       height: 16 / 12,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w500,
+      letterSpacing: .4,
       color: Color(ColorTones.neutral.tone100),
     ),
   );

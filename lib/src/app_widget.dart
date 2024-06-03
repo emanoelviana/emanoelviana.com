@@ -1,5 +1,6 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:emanoelviana/src/core/theme/app_theme.dart';
-import 'package:emanoelviana/src/pages/home/home_module.dart';
+import 'package:emanoelviana/src/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -11,9 +12,13 @@ class AppWidget extends StatelessWidget {
       title: 'Emanoel Viana',
       themeMode: ThemeMode.dark,
       theme: EmVianaTheme.dark,
-      routes: {...HomeModule().routers},
+      routes: {
+        '/home_page': (context) => const HomePage(),
+      },
       initialRoute: '/home_page',
       debugShowCheckedModeBanner: false,
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
     );
   }
 }

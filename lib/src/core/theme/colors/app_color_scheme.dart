@@ -6,6 +6,7 @@ class AppColorScheme {
 
   static ColorScheme dark = ColorScheme(
     brightness: Brightness.light,
+
     /// Primary
     primary: Color(ColorTones.primary.tone80),
     onPrimary: Color(ColorTones.primary.tone20),
@@ -27,11 +28,11 @@ class AppColorScheme {
     onInverseSurface: Color(ColorTones.neutral.tone10),
     surfaceContainerLowest: Color(ColorTones.neutral.tone20),
     surfaceContainerLow: Color(ColorTones.neutral.tone40),
-    
+
     /// Outline
     outline: Color(ColorTones.neutral.tone50),
     outlineVariant: Color(ColorTones.neutral.tone30),
-    
+
     /// Scrim and Shadow
     scrim: Color(ColorTones.neutral.tone0),
     shadow: Color(ColorTones.neutral.tone0),
