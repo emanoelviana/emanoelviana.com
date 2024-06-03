@@ -22,26 +22,14 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 IconButton(
                     onPressed: () async {
-                      var url = Uri.https('github.com', '/emanoelvianads');
-                      if (await canLaunchUrl(url)) {
-                        await launchUrl(url);
-                      } else {
-                        throw Exception('Could not launch $url');
-                      }
+                      _launchLink('https://github.com/emanoelvianads');
                     },
                     icon: const Icon(Remix.github_fill)),
                 IconButton(
                     onPressed: () async {
-                      var url = Uri.https('medium.com', '/@emanoelviana');
-                      if (await canLaunchUrl(url)) {
-                        await launchUrl(url);
-                      } else {
-                        throw Exception('Could not launch $url');
-                      }
+                      _launchLink('https://medium.com/@emanoelviana');
                     },
                     icon: const Icon(Remix.medium_fill)),
-                IconButton(
-                    onPressed: () {}, icon: const Icon(Remix.behance_fill)),
               ]),
         ]),
         Wrap(
@@ -80,4 +68,12 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size.fromHeight(80);
+}
+
+Future<void> _launchLink(String url) async {
+  if (await canLaunchUrl(Uri.parse(url))) {
+    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+  } else {
+    throw Exception('Could not open $url');
+  }
 }
