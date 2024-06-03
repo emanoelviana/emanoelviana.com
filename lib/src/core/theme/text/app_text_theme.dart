@@ -91,24 +91,24 @@ class AppTextTheme {
 
     bodyLarge: TextStyle(
       fontFamily: 'Roobert',
-      fontSize: 18,
-      height: 32 / 18,
-      fontWeight: FontWeight.w400,
-      color: Color(ColorTones.neutral.tone80),
-    ),
-
-    bodyMedium: TextStyle(
-      fontFamily: 'Roobert',
       fontSize: 16,
       height: 24 / 16,
       fontWeight: FontWeight.w400,
       color: Color(ColorTones.neutral.tone80),
     ),
 
-    bodySmall: TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: 'Roobert',
       fontSize: 14,
       height: 20 / 14,
+      fontWeight: FontWeight.w400,
+      color: Color(ColorTones.neutral.tone80),
+    ),
+
+    bodySmall: TextStyle(
+      fontFamily: 'Roobert',
+      fontSize: 12,
+      height: 16 / 12,
       fontWeight: FontWeight.w400,
       color: Color(ColorTones.neutral.tone80),
     ),
@@ -117,15 +117,6 @@ class AppTextTheme {
 
     labelLarge: TextStyle(
       fontFamily: 'Roobert',
-      fontSize: 16,
-      height: 24 / 16,
-      fontWeight: FontWeight.w500,
-      letterSpacing: .4,
-      color: Color(ColorTones.neutral.tone100),
-    ),
-
-    labelMedium: TextStyle(
-      fontFamily: 'Roobert',
       fontSize: 14,
       height: 20 / 14,
       fontWeight: FontWeight.w500,
@@ -133,10 +124,19 @@ class AppTextTheme {
       color: Color(ColorTones.neutral.tone100),
     ),
 
-    labelSmall: TextStyle(
+    labelMedium: TextStyle(
       fontFamily: 'Roobert',
       fontSize: 12,
       height: 16 / 12,
+      fontWeight: FontWeight.w500,
+      letterSpacing: .4,
+      color: Color(ColorTones.neutral.tone100),
+    ),
+
+    labelSmall: TextStyle(
+      fontFamily: 'Roobert',
+      fontSize: 10,
+      height: 12 / 10,
       fontWeight: FontWeight.w500,
       letterSpacing: .4,
       color: Color(ColorTones.neutral.tone100),

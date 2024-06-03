@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:emanoelviana/src/core/extensions/theme_extension.dart';
 import 'package:emanoelviana/src/core/utils/responsive_screen_provider.dart';
 
@@ -20,9 +21,25 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
               spacing: 16,
               children: [
                 IconButton(
-                    onPressed: () {}, icon: const Icon(Remix.github_fill)),
+                    onPressed: () async {
+                      var url = Uri.https('github.com', '/emanoelvianads');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      } else {
+                        throw Exception('Could not launch $url');
+                      }
+                    },
+                    icon: const Icon(Remix.github_fill)),
                 IconButton(
-                    onPressed: () {}, icon: const Icon(Remix.medium_fill)),
+                    onPressed: () async {
+                      var url = Uri.https('medium.com', '/@emanoelviana');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      } else {
+                        throw Exception('Could not launch $url');
+                      }
+                    },
+                    icon: const Icon(Remix.medium_fill)),
                 IconButton(
                     onPressed: () {}, icon: const Icon(Remix.behance_fill)),
               ]),
@@ -35,25 +52,25 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
+                    textStyle: context.text.bodyLarge,
                     foregroundColor: context.color.onSurface,
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 16, horizontal: 24)),
+                    padding: const EdgeInsets.all(16)),
                 child: const Text('Projects'),
               ),
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
+                    textStyle: context.text.bodyLarge,
                     foregroundColor: context.color.onSurface,
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 16, horizontal: 24)),
+                    padding: const EdgeInsets.all(16)),
                 child: const Text('About'),
               ),
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
+                    textStyle: context.text.bodyLarge,
                     foregroundColor: context.color.onSurface,
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 16, horizontal: 24)),
+                    padding: const EdgeInsets.all(16)),
                 child: const Text('Blog'),
               ),
             ]),

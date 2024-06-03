@@ -8,11 +8,11 @@ class MblNavigationBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      toolbarHeight: 64,
+      toolbarHeight: 56,
       title: Text('Emanoel Viana', style: context.text.titleMedium),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(64);
+  Size get preferredSize => const Size.fromHeight(56);
 }

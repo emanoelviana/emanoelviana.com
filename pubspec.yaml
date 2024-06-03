@@ -1,10 +1,8 @@
 name: emanoelviana
-
-description: "A new Flutter project."
+description: "Designer's website showcasing curated projects."
+version: 1.0.0+1
 
 publish_to: 'none'
-
-version: 1.0.0+1
 
 environment:
   sdk: '>=3.4.1 <4.0.0'
@@ -17,6 +15,7 @@ dependencies:
   gap: ^3.0.1
   firebase_core: ^2.32.0
   device_preview: ^1.2.0
+  url_launcher: ^6.2.6
 
 dev_dependencies:
   flutter_test:
