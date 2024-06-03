@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:remixicon/remixicon.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'dart:js' as js;
 
 class MblDrawer extends StatelessWidget {
   const MblDrawer({
@@ -34,29 +34,26 @@ class MblDrawer extends StatelessWidget {
                 endIndent: 16,
               ),
               ListTile(
-                onTap: () async {
-                  var url = Uri.https('github.com', '/emanoelvianads');
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  } else {
-                    throw Exception('Could not launch $url');
-                  }
+                onTap: () {
+                  js.context.callMethod(
+                      'opem', ['https://github.com/emanoelvianads']);
                 },
                 leading: const Icon(Remix.github_fill),
                 title: const Text('Github'),
               ),
               ListTile(
-                onTap: () async {
-                  var url = Uri.https('medium.com', '/@emanoelviana');
-                  if (await canLaunchUrl(url)) {
-                    await launchUrl(url);
-                  }
+                onTap: () {
+                  js.context
+                      .callMethod('open', ['https://medium.com/@emanoelviana']);
                 },
                 leading: const Icon(Remix.medium_fill),
                 title: const Text('Medium'),
               ),
               ListTile(
-                onTap: () {},
+                onTap: () {
+                  js.context.callMethod(
+                      'open', ['https://www.behance.net/emanoelviana']);
+                },
                 leading: const Icon(Remix.behance_fill),
                 title: const Text('Behance'),
               ),

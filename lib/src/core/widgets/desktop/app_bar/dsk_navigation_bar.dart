@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:emanoelviana/src/core/extensions/theme_extension.dart';
 import 'package:emanoelviana/src/core/utils/responsive_screen_provider.dart';
+import 'dart:js' as js;
 
 class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
   const DskNavigationBar({super.key});
@@ -22,12 +22,14 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 IconButton(
                     onPressed: () async {
-                      _launchLink('https://github.com/emanoelvianads');
+                      js.context.callMethod(
+                          'open', ['https://github.com/emanoelvianads']);
                     },
                     icon: const Icon(Remix.github_fill)),
                 IconButton(
                     onPressed: () async {
-                      _launchLink('https://medium.com/@emanoelviana');
+                      js.context.callMethod(
+                          'open', ['https://medium.com/@emanoelviana']);
                     },
                     icon: const Icon(Remix.medium_fill)),
               ]),
@@ -68,12 +70,4 @@ class DskNavigationBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size.fromHeight(80);
-}
-
-Future<void> _launchLink(String url) async {
-  if (await canLaunchUrl(Uri.parse(url))) {
-    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
-  } else {
-    throw Exception('Could not open $url');
-  }
 }
