@@ -1,24 +1,22 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:emanoelviana/src/core/theme/app_theme.dart';
-import 'package:emanoelviana/src/pages/home/home_page.dart';
+import 'package:emanoelviana/src/providers/theme_provider.dart';
+import 'package:emanoelviana/src/routers/router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AppWidget extends StatelessWidget {
+class AppWidget extends ConsumerWidget {
   const AppWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Emanoel Viana',
-      themeMode: ThemeMode.dark,
-      theme: EmVianaTheme.dark,
-      routes: {
-        '/home_page': (context) => const HomePage(),
-      },
-      initialRoute: '/home_page',
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(ThemeProvider.provider);
+
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      builder: DevicePreview.appBuilder,
-      locale: DevicePreview.locale(context),
+      routerConfig: router,
+      themeMode: themeMode,
+      title: 'Emanoel Viana',
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
     );
   }
 }

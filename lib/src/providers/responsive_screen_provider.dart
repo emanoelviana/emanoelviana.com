@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ResponsiveScreenProvider {
   static bool isSmallMobileDevice(BuildContext context) {
@@ -47,4 +48,8 @@ class ResponsiveScreenProvider {
         isLargeDesktopDevice(context) ||
         isExtraLargeDesktopDevice(context);
   }
+
+  final responsiveScreenProvider = Provider<ResponsiveScreenProvider>((ref) {
+    return ResponsiveScreenProvider();
+  });
 }

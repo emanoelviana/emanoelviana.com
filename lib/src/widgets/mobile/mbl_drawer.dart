@@ -36,7 +36,7 @@ class MblDrawer extends StatelessWidget {
               ListTile(
                 onTap: () {
                   js.context.callMethod(
-                      'opem', ['https://github.com/emanoelvianads']);
+                      'open', ['https://github.com/emanoelvianads']);
                 },
                 leading: const Icon(Remix.github_fill),
                 title: const Text('Github'),

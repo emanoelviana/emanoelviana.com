@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:emanoelviana/src/core/utils/responsive_screen_provider.dart';
-import 'package:emanoelviana/src/core/widgets/desktop/app_bar/dsk_navigation_bar.dart';
-import 'package:emanoelviana/src/core/widgets/mobile/mbl_drawer.dart';
-import 'package:emanoelviana/src/core/widgets/mobile/mbl_navigation_bar.dart';
+import 'package:emanoelviana/src/providers/responsive_screen_provider.dart';
+import 'package:emanoelviana/src/widgets/desktop/app_bar/dsk_app_bar.dart';
+import 'package:emanoelviana/src/widgets/mobile/mbl_drawer.dart';
+import 'package:emanoelviana/src/widgets/mobile/mbl_navigation_bar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         appBar: ResponsiveScreenProvider.isMobile(context) ||
                 ResponsiveScreenProvider.isTabletDevice(context)
             ? const MblNavigationBar()
-            : const DskNavigationBar(),
+            : const DskAppBar(),
         drawer: ResponsiveScreenProvider.isMobile(context) ||
                 ResponsiveScreenProvider.isTabletDevice(context)
             ? const MblDrawer()

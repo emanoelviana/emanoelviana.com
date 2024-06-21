@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:emanoelviana/src/core/extensions/theme_extension.dart';
+import 'package:emanoelviana/src/extensions/theme_extension.dart';
 
 class MblNavigationBar extends StatelessWidget implements PreferredSizeWidget {
   const MblNavigationBar({super.key});
