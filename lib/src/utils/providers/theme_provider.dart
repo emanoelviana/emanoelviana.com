@@ -8,7 +8,8 @@ class ThemeProvider extends StateNotifier<ThemeMode> {
     state = state == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
   }
 
-  static final provider = StateNotifierProvider<ThemeProvider, ThemeMode>((ref) {
+  static final provider =
+      StateNotifierProvider<ThemeProvider, ThemeMode>((ref) {
     return ThemeProvider();
   });
 }

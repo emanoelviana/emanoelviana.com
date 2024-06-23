@@ -1,5 +1,6 @@
+import 'package:emanoelviana/src/utils/statics/data_values.dart';
 import 'package:flutter/material.dart';
-import 'package:remixicon/remixicon.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 class ButtonGithub extends StatelessWidget {
@@ -9,9 +10,12 @@ class ButtonGithub extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () async {
-        js.context.callMethod('open', ['https://github.com/emanoelviana']);
+        js.context.callMethod(
+          'open',
+          [DataValues.socialGithubLink],
+        );
       },
-      icon: const Icon(Remix.github_fill),
+      icon: DataValues.socialGithubIcon,
     );
   }
 }
