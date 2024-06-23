@@ -13,7 +13,7 @@ class HeaderTrailingActions extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const ButtonOpenForFreelance(),
-        Gap(ResponsiveScreenProvider.isDesktopDevice(context) ? 24 : 16),
+        Gap(ResponsiveScreenProvider.isDesktopDevice(context) ? 24 : 8),
         const ButtonToggleTheme(),
       ],
     );

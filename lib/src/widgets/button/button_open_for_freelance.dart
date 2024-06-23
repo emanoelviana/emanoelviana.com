@@ -1,4 +1,5 @@
 import 'package:emanoelviana/src/utils/extensions/theme_extension.dart';
+import 'package:emanoelviana/src/utils/providers/responsive_screen_provider.dart';
 import 'package:emanoelviana/src/utils/statics/data_values.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -10,7 +11,7 @@ class ButtonOpenForFreelance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(48),
           border: Border.all(
@@ -20,9 +21,9 @@ class ButtonOpenForFreelance extends StatelessWidget {
       child: Row(
         children: [
           RippleAnimation(
-            ripplesCount: 2,
+            ripplesCount: 3,
             repeat: true,
-            minRadius: 10,
+            minRadius: 8,
             color: context.color.primary.withOpacity(.64),
             child: Container(
               width: 8,
@@ -36,7 +37,9 @@ class ButtonOpenForFreelance extends StatelessWidget {
           const Gap(16),
           Text(
             DataValues.availability,
-            style: context.text.bodyLarge,
+            style: ResponsiveScreenProvider.isDesktopDevice(context)
+                ? context.dskTextLowEmphasys
+                : context.mblTextLowEmphasys,
           ),
         ],
       ),

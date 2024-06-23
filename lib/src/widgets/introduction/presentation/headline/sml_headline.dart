@@ -10,6 +10,7 @@ class SmlHeadline extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           textAlign: TextAlign.center,
@@ -19,7 +20,6 @@ class SmlHeadline extends StatelessWidget {
         TypewriteText(
           needCursor: false,
           beforeAnimationDuration: const Duration(milliseconds: 350),
-          cursorColor: context.color.onSurface,
           forwardAnimationDuration: const Duration(milliseconds: 200),
           linesOfText: DataValues.valuePropositions,
           textStyle: context.mblTitle.copyWith(

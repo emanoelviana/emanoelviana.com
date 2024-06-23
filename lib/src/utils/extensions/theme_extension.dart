@@ -12,7 +12,7 @@ extension ThemeExtension on BuildContext {
         fontWeight: FontWeight.w700,
       );
 
-TextStyle get mblTitle => const TextStyle(
+  TextStyle get mblTitle => const TextStyle(
         fontFamily: 'Roobert',
         fontSize: 36,
         height: 40 / 36,
@@ -27,13 +27,12 @@ TextStyle get mblTitle => const TextStyle(
         height: 28 / 20,
         fontWeight: FontWeight.w400,
       );
-  
+
   TextStyle get mblSubtitle => const TextStyle(
         fontFamily: 'Roobert',
         fontSize: 18,
-        letterSpacing: .2,
-        height: 28 / 18,
-        fontWeight: FontWeight.w500,
+        height: 26 / 18,
+        fontWeight: FontWeight.w400,
       );
 
   TextStyle get dskTextLowEmphasys => const TextStyle(
@@ -48,7 +47,7 @@ TextStyle get mblTitle => const TextStyle(
         letterSpacing: .2,
         fontSize: 14,
         fontWeight: FontWeight.w500,
-      );    
+      );
 
   /// Color Scheme
   ColorScheme get color => Theme.of(this).colorScheme;

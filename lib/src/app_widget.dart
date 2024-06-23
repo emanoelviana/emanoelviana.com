@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:emanoelviana/src/utils/providers/theme_provider.dart';
 import 'package:emanoelviana/src/utils/routers/router.dart';
 import 'package:emanoelviana/src/utils/statics/data_values.dart';
@@ -20,9 +19,6 @@ class AppWidget extends ConsumerWidget {
       title: DataValues.name,
       theme: FlexThemeData.light(scheme: FlexScheme.wasabi),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.wasabi),
-      //
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
     );
   }
 }
