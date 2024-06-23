@@ -27,7 +27,7 @@ class Presentation extends StatelessWidget {
               : ResponsiveScreenProvider.isTabletDevice(context)
                   ? const MblHeadline()
                   : const SmlHeadline(),
-          Gap(ResponsiveScreenProvider.isDesktopDevice(context) ? 56 : 24),
+          Gap(ResponsiveScreenProvider.isDesktopDevice(context) ? 48 : 32),
           ResponsiveScreenProvider.isDesktopDevice(context)
               ? const DskProfessionalStatement()
               : const MblProfessionalStatement(),

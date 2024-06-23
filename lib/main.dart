@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:emanoelviana/src/app_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -11,8 +12,11 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    const ProviderScope(
-      child: AppWidget(),
+    ProviderScope(
+      child: DevicePreview(
+        enabled: true,
+        builder: (context) => const AppWidget(),
+      ),
     ),
   );
 }

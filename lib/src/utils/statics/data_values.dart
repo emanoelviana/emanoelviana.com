@@ -8,7 +8,7 @@ class DataValues {
 
   /// Presentation Content
   // Headline
-  static const headline ='I specialize in designing engaging experiences that connect companies to their audiences';
+  static const headline ='I specialize in designing experiences that connect companies to their audiences';
   static const valuePropositions = ['applications', 'solutions', 'brands'];
   static const professionalState = 'Currently working as a Senior Designer at';
 

@@ -10,21 +10,21 @@ class DskHeadline extends StatelessWidget {
    @override
    Widget build(BuildContext context) {
        return ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 760),
+            constraints: const BoxConstraints(maxWidth: 720),
             child: Wrap(
               alignment: WrapAlignment.center,
               direction: Axis.horizontal,
               children: [
                 Text(
                   textAlign: TextAlign.center,
-                  'I specialized in designing',
+                  'I specialized in',
                   style: context.dskTitle,
                 ),
                 Wrap(
                   direction: Axis.horizontal,
                   children: [
                     Text(
-                      'engaging ',
+                      'designing ',
                       style: context.dskTitle,
                     ),
                     TypewriteText(

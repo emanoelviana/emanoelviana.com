@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           vertical: ResponsiveScreenProvider.isDesktopDevice(context) ? 16 : 8,
           horizontal:
-              ResponsiveScreenProvider.isDesktopDevice(context) ? 96 : 8),
+              ResponsiveScreenProvider.isDesktopDevice(context) ? 96 : 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

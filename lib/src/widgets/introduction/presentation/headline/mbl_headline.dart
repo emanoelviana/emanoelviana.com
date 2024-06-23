@@ -16,7 +16,7 @@ class MblHeadline extends StatelessWidget {
         children: [
           Text(
             textAlign: TextAlign.center,
-            'I specialized in designing',
+            'I specialized in',
             style: context.mblTitle,
           ),
           Wrap(
@@ -24,7 +24,7 @@ class MblHeadline extends StatelessWidget {
             children: [
               Text(
                 textAlign: TextAlign.center,
-                'engaging ',
+                'designing ',
                 style: context.mblTitle,
               ),
               TypewriteText(

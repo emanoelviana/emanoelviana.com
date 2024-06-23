@@ -14,9 +14,9 @@ extension ThemeExtension on BuildContext {
 
 TextStyle get mblTitle => const TextStyle(
         fontFamily: 'Roobert',
-        fontSize: 40,
-        height: 48 / 40,
-        letterSpacing: -.2,
+        fontSize: 36,
+        height: 40 / 36,
+        letterSpacing: -.04,
         fontWeight: FontWeight.w700,
       );
 
@@ -32,7 +32,7 @@ TextStyle get mblTitle => const TextStyle(
         fontFamily: 'Roobert',
         fontSize: 18,
         letterSpacing: .2,
-        height: 24 / 18,
+        height: 28 / 18,
         fontWeight: FontWeight.w500,
       );
 
