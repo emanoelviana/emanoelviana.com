@@ -6,12 +6,12 @@ import 'package:emanoelviana/src/utils/extensions/theme_extension.dart';
 import 'package:emanoelviana/src/utils/providers/theme_provider.dart';
 import 'package:emanoelviana/src/widgets/footer/footer.dart';
 import 'package:emanoelviana/src/widgets/header/header.dart';
-import 'package:emanoelviana/src/widgets/introduction/presentation/dsk_presentation.dart';
+import 'package:emanoelviana/src/widgets/introduction/presentation/presentation.dart';
 
-class DskIntroduction extends ConsumerWidget {
+class Introduction extends ConsumerWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
-  const DskIntroduction({
+  const Introduction({
     super.key,
     required this.scaffoldKey,
   });
@@ -20,7 +20,6 @@ class DskIntroduction extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(ThemeProvider.provider);
 
-    // Background -  Mesh Gradient
     return MeshGradient(
       points: [
         MeshGradientPoint(
@@ -30,23 +29,17 @@ class DskIntroduction extends ConsumerWidget {
         MeshGradientPoint(
             position: const Offset(1, 0), color: context.color.surface),
         MeshGradientPoint(
-            position: const Offset(.75, 1),
-            color: themeMode == ThemeMode.dark
-                ? context.color.secondaryContainer
-                : context.color.primary),
+          position: const Offset(.75, 1),
+          color: themeMode == ThemeMode.dark
+              ? context.color.secondaryContainer
+              : context.color.primary,
+        ),
       ],
       options: MeshGradientOptions(blend: 2, noiseIntensity: .6),
-
-      // Introduction Content
       child: Stack(
         children: [
-          // Text Related Content
-          const DskPresentation(),
-
-          // Footer
+          const Presentation(),
           const Footer(),
-
-          // Header
           Header(scaffoldKey: scaffoldKey),
         ],
       ),

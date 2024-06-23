@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
-class GobDrawer extends StatelessWidget {
-  const GobDrawer({
+class SideBar extends StatelessWidget {
+  const SideBar({
     super.key,
   });
 

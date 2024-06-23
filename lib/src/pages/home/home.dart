@@ -1,6 +1,6 @@
-import 'package:emanoelviana/src/widgets/introduction/dsk_introduction.dart';
+import 'package:emanoelviana/src/widgets/introduction/introduction.dart';
 import 'package:flutter/material.dart';
-import 'package:emanoelviana/src/widgets/drawer/gob_drawer.dart';
+import 'package:emanoelviana/src/widgets/side_bar/side_bar.dart';
 
 class Home extends StatelessWidget {
   static final GlobalKey<ScaffoldState> scaffoldKey =
@@ -11,8 +11,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer: const GobDrawer(),
-      body: DskIntroduction(scaffoldKey: scaffoldKey),
+      drawer: const SideBar(),
+      body: Introduction(scaffoldKey: scaffoldKey),
     );
   }
 }

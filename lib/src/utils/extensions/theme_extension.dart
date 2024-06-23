@@ -33,15 +33,22 @@ TextStyle get mblTitle => const TextStyle(
         fontSize: 18,
         letterSpacing: .2,
         height: 24 / 18,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
       );
 
-  TextStyle get textLowEmphasys => const TextStyle(
+  TextStyle get dskTextLowEmphasys => const TextStyle(
         fontFamily: 'Roobert',
         letterSpacing: .2,
         fontSize: 16,
         fontWeight: FontWeight.w500,
       );
+
+  TextStyle get mblTextLowEmphasys => const TextStyle(
+        fontFamily: 'Roobert',
+        letterSpacing: .2,
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+      );    
 
   /// Color Scheme
   ColorScheme get color => Theme.of(this).colorScheme;

@@ -1,5 +1,4 @@
 import 'package:emanoelviana/src/utils/providers/responsive_screen_provider.dart';
-import 'package:emanoelviana/src/utils/statics/data_values.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:emanoelviana/src/utils/extensions/theme_extension.dart';
@@ -21,8 +20,10 @@ class HeaderLeadingActions extends StatelessWidget {
         ButtonMenu(scaffoldKey: scaffoldKey),
         Gap(ResponsiveScreenProvider.isDesktopDevice(context) ? 24 : 16),
         Text(
-          DataValues.name,
-          style: context.textLowEmphasys,
+          '',
+          style: ResponsiveScreenProvider.isDesktopDevice(context)
+              ? context.dskSubtitle
+              : context.mblSubtitle,
         )
       ],
     );

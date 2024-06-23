@@ -21,9 +21,9 @@ class Header extends StatelessWidget {
       ),
       width: context.deviceWidth,
       padding: EdgeInsets.symmetric(
-          vertical: 16,
+          vertical: ResponsiveScreenProvider.isDesktopDevice(context) ? 16 : 8,
           horizontal:
-              ResponsiveScreenProvider.isDesktopDevice(context) ? 96 : 16),
+              ResponsiveScreenProvider.isDesktopDevice(context) ? 96 : 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

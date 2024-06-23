@@ -1,4 +1,4 @@
-import 'package:emanoelviana/src/pages/home.dart';
+import 'package:emanoelviana/src/pages/home/home.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
